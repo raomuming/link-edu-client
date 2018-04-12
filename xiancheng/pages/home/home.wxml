@@ -1,6 +1,6 @@
-<block wx:for-items="{{list}}" wx:key="id">
-<navigator url="../course/course?id={{item.id}}" hover-class="navigator-hover">
-  <image src="{{item.avatar}}" class="pic"></image>
+<block wx:for-items="{{list}}" wx:key="_id">
+<navigator url="../course/course?id={{item._id}}" hover-class="navigator-hover">
+  <image src="{{item.cover}}" class="pic"></image>
   <view class="right">
     <text class="title">{{item.name}}</text>
   </view>
