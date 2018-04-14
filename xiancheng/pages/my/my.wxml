@@ -1,0 +1,27 @@
+<view class="my">
+  <view class="body">
+    <!--显示登录头像，或者在没有登录的情况下提示用户登录-->
+    <view class="widgets_item">
+      <view class="widgets_list">
+      section 1
+      </view>
+    </view>
+
+    <!--个人相关的操作，比如关注课程之类的-->
+    <view class="widgets_item">
+      <view class="widgets_list">
+      section 2
+      </view>
+    </view>
+
+    <!--关于我们-->
+    <view class="widgets_item">
+      <view class="widgets_list">
+        <navigator url="../about/about" class="widget">
+          <text class="widget_name">关于我们</text>
+          <image class="widget_arrow" src="/images/widgets/arrow.png"></image>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>
