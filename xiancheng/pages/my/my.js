@@ -1,6 +1,6 @@
 Page({
   data: {
-    isLogin: false
+    isLoggin: false
   },
   onLoad: function(options) {
     

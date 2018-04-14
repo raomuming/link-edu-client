@@ -1,10 +1,16 @@
 <view class="my">
   <view class="body">
     <!--显示登录头像，或者在没有登录的情况下提示用户登录-->
-    <view class="widgets_item">
-      <view class="widgets_list">
-      section 1
-      </view>
+    <view class="widgets_user">
+      <block wx:if="{{isLoggin}}">
+          <image class="widget_avatar" src="/images/widgets/default_avatar.jpeg" background-size="cover" mode="aspectFit"></image>
+          <text class="widget_user_name">饶木明</text>
+      </block>
+      <block wx:else>
+          <image class="widget_avatar" src="/images/widgets/default_avatar.jpeg" background-size="cover" mode="aspectFit"></image>
+          <text class="widget_user_name">登录</text>
+          <image class="widget_user_arrow" src="/images/widgets/arrow.png"></image>
+      </block>
     </view>
 
     <!--个人相关的操作，比如关注课程之类的-->

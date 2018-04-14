@@ -50,3 +50,30 @@
   height: 1rpx;
   background-color: #DFDFDF;
 }
+
+.widgets_user {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #FFFFFF;
+  overflow: hidden;
+  border-radius: 2px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 20px;
+}
+
+.widget_avatar {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+}
+
+.widget_user_arrow {
+  width: 10px;
+  height: 20px;
+  padding-left: 10px;
+}
