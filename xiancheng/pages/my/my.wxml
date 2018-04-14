@@ -10,7 +10,20 @@
     <!--个人相关的操作，比如关注课程之类的-->
     <view class="widgets_item">
       <view class="widgets_list">
-      section 2
+        <navigator url="../my_course/my_course" class="widget">
+          <text class="widget_name">我的课程</text>
+          <image class="widget_arrow" src="/images/widgets/arrow.png" background-size="cover"></image>
+          <view class="widget_line"></view>
+        </navigator>
+        <navigator url="../fav_course/fav_course" class="widget">
+          <text class="widget_name">关注课程</text>
+          <image class="widget_arrow" src="/images/widgets/arrow.png"></image>
+          <view class="widget_line"></view>
+        </navigator>
+        <navigator url="../release_course/release_course" class="widget">
+          <text class="widget_name">发布课程</text>
+          <image class="widget_arrow" src="/images/widgets/arrow.png"></image>
+        </navigator>
       </view>
     </view>
 

@@ -1,5 +1,7 @@
 Page({
-  data: {},
+  data: {
+    isLogin: false
+  },
   onLoad: function(options) {
     
   }
