@@ -10,7 +10,7 @@ App({
           self.login((userInfo)=>{
             console.log('after login, userInfo => ', userInfo);
             if (userInfo) {
-              self.globalData.userInfo = userInfo;
+              //self.globalData.userInfo = userInfo;
               console.log("self.globalData => ", self.globalData);
             }
           });
@@ -22,6 +22,7 @@ App({
     userInfo: null
   },
   login: function(callback) {
+    let self = this;
     wx.login({
       success: function(res) {
         var code = res.code;
@@ -48,6 +49,7 @@ App({
                 },
                 success: function(res) {
                   console.log("login data =>", res.data);
+                  self.globalData.userInfo = res.data;
                   callback(res.data);
                 }
               });

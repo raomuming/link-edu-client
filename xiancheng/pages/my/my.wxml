@@ -8,7 +8,7 @@
       </view>
     </block>
     <block wx:else>
-      <view class="widgets_user">
+      <view class="widgets_user" bindtap="loginUser">
         <image class="widget_avatar" src="/images/widgets/default_avatar.jpeg" background-size="cover" mode="aspectFit"></image>
         <text class="widget_user_name">登录</text>
         <image class="widget_user_arrow" src="/images/widgets/arrow.png"></image>
