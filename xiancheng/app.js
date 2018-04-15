@@ -8,8 +8,10 @@ App({
         if (res.authSetting['scope.userInfo']) {
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
           self.login((userInfo)=>{
+            console.log('after login, userInfo => ', userInfo);
             if (userInfo) {
               self.globalData.userInfo = userInfo;
+              console.log("self.globalData => ", self.globalData);
             }
           });
         }
@@ -30,6 +32,7 @@ App({
               // checkSettingStatus()
             },
             success: function(data) {
+              console.log("data => ", data);
               var encryptedData = data.encryptedData;
               var iv = data.iv;
               wx.request({
