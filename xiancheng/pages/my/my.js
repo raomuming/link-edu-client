@@ -20,6 +20,12 @@ Page({
         let authSetting = res.authSetting;
         if (self.isEmptyObject(authSetting)) {
           console.log("first time auth");
+          app.login((user) => {
+            self.setData({
+              isLoggin: user != null,
+              userInfo: user
+            });
+          });
         } else {
           console.log("authSetting => ", authSetting);
           if (authSetting["scope.userInfo"] === false) {
