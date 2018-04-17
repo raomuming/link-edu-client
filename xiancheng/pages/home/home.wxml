@@ -1,4 +1,4 @@
-<block wx:for-items="{{list}}" wx:key="_id">
+<block wx:for-items="{{courses}}" wx:key="_id">
 <navigator url="../course/course?id={{item._id}}" hover-class="navigator-hover">
   <image src="{{item.cover}}" class="pic"></image>
   <view class="right">
