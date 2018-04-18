@@ -18,6 +18,9 @@ Page({
   onReachBottom: function() {
     let self = this;
     console.log("onReachBottom => ");
+    if (!self.data.hasMore) {
+      return;
+    }
     let fetch_options = {
       older_than: self.data.olderThan,
       count: count

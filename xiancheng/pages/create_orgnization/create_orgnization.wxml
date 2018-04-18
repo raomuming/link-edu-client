@@ -1,0 +1,31 @@
+<view class="body">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="section">
+      <view class="section_title">名称:</view>
+      <input type="text" class="input-text" name="name" placeholder="请输入名称" />
+    </view>
+
+    <view class="section">
+      <view class="section_title">描述信息:</view>
+      <textarea class="description" name="description" placeholder="请填写描述内容(500字内)" maxlength="500"></textarea>
+    </view>
+
+    <view class="section btn-area">
+      <button form-type="submit">提交</button>
+      <button form-type="reset">清空</button>
+    </view>
+  </form>
+
+  <toast hidden="{{toastHidden}}" bindchange="toastChange">
+    {{noticeStr}}
+  </toast>
+
+  <modal title="确认" confirm-text="确定" cancel-text="取消" hidden="{{submitConfirmHidden}}" mask bindconfirm="confirmSubmit" bindcancel="cancelSubmit">
+    确认提交么?
+  </modal>
+
+  <modal class="modal" hidden="{{resetConfirmHidden}}" no-cancel bindconfirm="confirmReset" bindcancel="confirmReset">
+    <view>提示</view>
+    <view>清除成功</view>
+  </modal>
+</view>

@@ -2,7 +2,8 @@
   "pages":[
     "pages/home/home",
     "pages/my/my",
-    "pages/course/course"
+    "pages/course/course",
+    "pages/create_orgnization/create_orgnization"
   ],
   "window":{
     "backgroundTextStyle":"light",
