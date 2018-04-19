@@ -1,4 +1,5 @@
 // ref: https://blog.csdn.net/wujiangwei567/article/details/52795656
+let app = getApp();
 Page({
   data: {
     toastHidden: true,
@@ -19,6 +20,8 @@ Page({
     if (e.detail.value.description && e.detail.value.description.length > 0) {
       orgnization.description = e.detail.value.description;
     }
+
+    orgnization.open_id = app.globalData.userInfo.open_id;
 
     console.log("orgnization body => ", orgnization);
 
@@ -59,6 +62,11 @@ Page({
       submitConfirmHidden: true,
       toastHidden: false,
       noticeStr: "提交成功"
+    });
+  },
+  toastChange: function(e) {
+    this.setData({
+      toastHidden: true
     });
   }
 });
