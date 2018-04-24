@@ -3,7 +3,8 @@
     "pages/home/home",
     "pages/my/my",
     "pages/course/course",
-    "pages/create_orgnization/create_orgnization"
+    "pages/create_orgnization/create_orgnization",
+    "pages/orgnization/orgnization"
   ],
   "window":{
     "backgroundTextStyle":"light",

@@ -39,7 +39,8 @@ Page({
       success: function(res) {
         console.log("create orgnization successfully.");
         self.setData({
-          submitConfirmHidden: false
+          submitConfirmHidden: false,
+          id: res.data._id
         });
       }
     });
@@ -57,12 +58,16 @@ Page({
     });
   },
   confirmSubmit: function(e) {
+    let self = this;
     console.log("confirm Submit => ", e);
     this.setData({
       submitConfirmHidden: true,
       toastHidden: false,
       noticeStr: "提交成功"
     });
+    wx.redirectTo({
+      url: "/pages/orgnization/orgnization?id=" + self.data.id
+    })
   },
   toastChange: function(e) {
     this.setData({
