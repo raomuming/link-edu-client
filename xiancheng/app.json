@@ -4,7 +4,8 @@
     "pages/my/my",
     "pages/course/course",
     "pages/create_orgnization/create_orgnization",
-    "pages/orgnization/orgnization"
+    "pages/orgnization/orgnization",
+    "pages/invite_to_orgnization/invite_to_orgnization"
   ],
   "window":{
     "backgroundTextStyle":"light",

@@ -5,14 +5,23 @@ Page({
   onLoad: function (options) {
     let self = this;
     if (options.id != null && options.id > 0) {
-      self.fetchOrgnizationById(options.id, (course) => {
-        if (course != null) {
+      self.fetchOrgnizationById(options.id, (orgnization) => {
+        if (orgnization != null) {
           self.setData({
-            course: course
+            orgnization: orgnization
           });
         }
       });
     }
+  },
+  onShareAppMessage: function() {
+    let self = this;
+    return {
+      title: "邀请加入XXX",
+      desc: "测试分享磕碜",
+      path: "/pages/invite_to_orgnization/invite_to_orgnization"
+    };
+
   },
   fetchOrgnizationById(id, callback) {
     console.log('fetch orgnization by id: ' + id);
