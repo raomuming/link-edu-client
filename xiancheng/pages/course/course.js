@@ -31,5 +31,13 @@ Page({
 
       }
     });
+  },
+  onShareAppMessage: function() {
+    let self = this;
+    return {
+      title: "分享课程",
+      desc: "测试分享磕碜",
+      path: "/pages/course/course?id=" + self.data._id
+    };
   }
 });
